@@ -11,16 +11,16 @@ WEAKSWEET Checker is a Bash script that scans a list of IP addresses for weak SS
 
 ## Installation
 
-1. Clone the repository or download the Bash script (`weaksweet_checker.sh`) to your local machine:
+1. Clone the repository or download the Bash script (`weaksweet.sh`) to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/weaksweet-checker.git
+git clone https://github.com/nieshakenzie/WeakSweet.git
 ```
 
 2. Make the script executable:
 
 ```bash
-chmod +x weaksweet_checker.sh
+chmod +x weaksweet.sh
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ chmod +x weaksweet_checker.sh
 To scan a list of IP addresses for weak SSH algorithms and SWEET32 vulnerabilities, use the following command:
 
 ```bash
-./weaksweet_checker.sh -i input_file.txt -o output_file.txt
+./weaksweet.sh -i input_file.txt -o output_file.txt
 ```
 Replace `input_file.txt` with the path to your input file containing a list of IP addresses. 
 Replace `output_file.txt` with the desired name of the output file where the scan results will be saved.
