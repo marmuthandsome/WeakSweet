@@ -17,7 +17,13 @@ WEAKSWEET Checker is a Bash script that scans a list of IP addresses for weak SS
 git clone https://github.com/nieshakenzie/WeakSweet.git
 ```
 
-2. Make the script executable:
+2. Go to directory WeakSweet:
+
+```bash
+cd WeakSweet
+```
+
+3. Make the script executable:
 
 ```bash
 chmod +x weaksweet.sh
