@@ -55,7 +55,7 @@ IP Address      | Port Status        | Scan Result
 
 Output File Saved on output.txt
 ```
-![Photo](https://raw.githubusercontent.com/nieshakenzie/WeakSweet/master/Screenshot/Weak.png)
-
+![Weak](https://raw.githubusercontent.com/nieshakenzie/WeakSweet/master/Screenshot/Weak.png)
+![Sweet32](https://raw.githubusercontent.com/nieshakenzie/WeakSweet/master/Screenshot/Sweet32.png)
 
 ---
