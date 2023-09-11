@@ -31,12 +31,15 @@ To scan a list of IP addresses for weak SSH algorithms and SWEET32 vulnerabiliti
 ./weaksweet.sh -i input_file.txt -o output_file.txt
 ```
 Replace `input_file.txt` with the path to your input file containing a list of IP addresses. 
+
 Replace `output_file.txt` with the desired name of the output file where the scan results will be saved.
 
 ## Options
 
 -h: Display the help message, which includes usage instructions and available options.
+
 -i input_file: Specify the input file containing a list of IP addresses to scan. Each IP address should be on a separate line in the file.
+
 -o output_file: Specify the output file where the scan results will be saved. If not specified, the default output file is output.txt.
 
 ## Sample Output
