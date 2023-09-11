@@ -151,7 +151,7 @@ printf "%s\n" "-----------------------------------------------------------------
 
 # Read IP addresses from the input file again for SWEET32 scan
 while read -r ip || [[ -n "$ip" ]]; do
-    port_status=$(nmap -T5 -Pn p 443 "$ip" 2>/dev/null | grep "443" | awk '{print $2}')
+    port_status=$(nmap -T5 -Pn -p 443 "$ip" 2>/dev/null | grep "443" | awk '{print $2}')
     
     if [ "$port_status" == "closed" ] || [ "$port_status" == "filtered" ]; then
         printf "\033[0;33m%-20s | %-20s | %-20s\033[0m\n" "$ip" "$port_status" "Filtered or Closed"
