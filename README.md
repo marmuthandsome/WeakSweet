@@ -1,3 +1,6 @@
+<img width="1600" height="900" alt="weaksweet-logo" src="https://raw.githubusercontent.com/marmuthandsome/WeakSweet/e60cbce08d4457b613cf338537012ad4690cc987/Screenshot/weaksweet-logo.svg" />
+
+
 # WEAKSWEET
 
 WEAKSWEET Checker is a Bash script that scans a list of IP addresses for weak SSH algorithms and vulnerabilities related to the SWEET32 attack. It provides a comprehensive report of the scan results.
