@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Dark terminal background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050A14"/>
+      <stop offset="60%" style="stop-color:#0B0F1A"/>
+      <stop offset="100%" style="stop-color:#0D1525"/>
+    </linearGradient>
+
+    <!-- Neon mint glow for shield -->
+    <radialGradient id="shieldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00C896;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#00C896;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Scanline pattern -->
+    <pattern id="scanlines" x="0" y="0" width="1600" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1600" height="2" fill="rgba(255,255,255,0.015)"/>
+    </pattern>
+
+    <!-- Grid dot pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="0.8" fill="#00C896" opacity="0.2"/>
+    </pattern>
+
+    <!-- Shield inner gradient -->
+    <linearGradient id="shieldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F2035"/>
+      <stop offset="100%" style="stop-color:#071220"/>
+    </linearGradient>
+
+    <!-- Text glow filter -->
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shield glow filter -->
+    <filter id="shieldGlowFilter" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Corner line filter -->
+    <filter id="lineGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bgGrad)"/>
+
+  <!-- Dot grid overlay -->
+  <rect width="1600" height="900" fill="url(#dotGrid)"/>
+
+  <!-- Scanlines overlay -->
+  <rect width="1600" height="900" fill="url(#scanlines)"/>
+
+  <!-- Ambient glow behind shield -->
+  <ellipse cx="800" cy="440" rx="320" ry="280" fill="url(#shieldGlow)"/>
+
+  <!-- Corner bracket decorations -->
+  <!-- Top-left -->
+  <polyline points="60,60 60,110 110,110" fill="none" stroke="#00C896" stroke-width="2.5" opacity="0.5" filter="url(#lineGlow)"/>
+  <!-- Top-right -->
+  <polyline points="1540,60 1540,110 1490,110" fill="none" stroke="#00C896" stroke-width="2.5" opacity="0.5" filter="url(#lineGlow)"/>
+  <!-- Bottom-left -->
+  <polyline points="60,840 60,790 110,790" fill="none" stroke="#00C896" stroke-width="2.5" opacity="0.5" filter="url(#lineGlow)"/>
+  <!-- Bottom-right -->
+  <polyline points="1540,840 1540,790 1490,790" fill="none" stroke="#00C896" stroke-width="2.5" opacity="0.5" filter="url(#lineGlow)"/>
+
+  <!-- Thin horizontal rule lines -->
+  <line x1="100" y1="130" x2="640" y2="130" stroke="#1E3A52" stroke-width="1" opacity="0.6"/>
+  <line x1="960" y1="130" x2="1500" y2="130" stroke="#1E3A52" stroke-width="1" opacity="0.6"/>
+  <line x1="100" y1="770" x2="640" y2="770" stroke="#1E3A52" stroke-width="1" opacity="0.6"/>
+  <line x1="960" y1="770" x2="1500" y2="770" stroke="#1E3A52" stroke-width="1" opacity="0.6"/>
+
+  <!-- Shield shape (main icon) -->
+  <g filter="url(#shieldGlowFilter)">
+    <!-- Shield outer stroke -->
+    <path d="M800,180 L980,250 L980,450 Q980,570 800,640 Q620,570 620,450 L620,250 Z"
+          fill="url(#shieldFill)" stroke="#00C896" stroke-width="2.5" opacity="0.95"/>
+    <!-- Shield inner border highlight -->
+    <path d="M800,200 L960,265 L960,450 Q960,555 800,618 Q640,555 640,450 L640,265 Z"
+          fill="none" stroke="#00C896" stroke-width="1" opacity="0.25"/>
+  </g>
+
+  <!-- SSH key icon inside shield — stylized lock + waveform -->
+  <!-- Lock body -->
+  <rect x="763" y="370" width="74" height="62" rx="7" ry="7"
+        fill="none" stroke="#00C896" stroke-width="2.5" opacity="0.9"/>
+  <!-- Lock shackle -->
+  <path d="M775,370 L775,345 Q800,318 825,345 L825,370"
+        fill="none" stroke="#00C896" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <!-- Keyhole -->
+  <circle cx="800" cy="397" r="9" fill="#00C896" opacity="0.85"/>
+  <rect x="796" y="403" width="8" height="16" rx="2" fill="#00C896" opacity="0.85"/>
+
+  <!-- Waveform / algo scan below lock -->
+  <polyline points="720,470 735,455 748,482 762,445 776,478 790,458 804,478 818,445 832,482 846,455 860,470 875,455 888,475"
+            fill="none" stroke="#F5FF3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+
+  <!-- Decorative: small circuit dots on shield -->
+  <circle cx="700" cy="310" r="3" fill="#00C896" opacity="0.4"/>
+  <circle cx="900" cy="310" r="3" fill="#00C896" opacity="0.4"/>
+  <line x1="700" y1="310" x2="720" y2="310" stroke="#00C896" stroke-width="1" opacity="0.3"/>
+  <line x1="880" y1="310" x2="900" y2="310" stroke="#00C896" stroke-width="1" opacity="0.3"/>
+
+  <!-- Main wordmark: WEAKSWEET -->
+  <text x="800" y="722"
+        font-family="'Courier New', 'Lucida Console', monospace"
+        font-size="86"
+        font-weight="700"
+        letter-spacing="18"
+        text-anchor="middle"
+        fill="#00C896"
+        filter="url(#textGlow)"
+        opacity="0.97">WEAKSWEET</text>
+
+  <!-- Tagline -->
+  <text x="800" y="768"
+        font-family="'Courier New', monospace"
+        font-size="20"
+        letter-spacing="6"
+        text-anchor="middle"
+        fill="#F5FF3C"
+        opacity="0.65">SSH VULNERABILITY SCANNER</text>
+
+  <!-- Small version / badge bottom right -->
+  <rect x="1390" y="838" width="120" height="28" rx="14" fill="#F5FF3C" opacity="0.12"/>
+  <text x="1450" y="856"
+        font-family="'Courier New', monospace"
+        font-size="13"
+        letter-spacing="2"
+        text-anchor="middle"
+        fill="#F5FF3C"
+        opacity="0.55">v1.0</text>
+
+  <!-- Left label decoration -->
+  <text x="110" y="78"
+        font-family="'Courier New', monospace"
+        font-size="12"
+        letter-spacing="3"
+        fill="#00C896"
+        opacity="0.35">0xferry // marmuthandsome</text>
+
+  <!-- Right label decoration -->
+  <text x="1490" y="78"
+        font-family="'Courier New', monospace"
+        font-size="12"
+        letter-spacing="3"
+        text-anchor="end"
+        fill="#00C896"
+        opacity="0.35">SWEET32 · SSH · BASH</text>
+</svg>
